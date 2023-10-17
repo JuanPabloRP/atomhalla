@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
 import PublicLayout from './layouts/PublicLayout';
+import NoMatch from "./components/NoMatch"
 
 function App() {
 	return (
@@ -11,8 +12,8 @@ function App() {
 						<Route path="" element={<Index />} />
 					</Route>
 
-					{/* Cambiar por un componente NoMatch */}
-					<Route path="*" element={<h1>Esta ruta no existe</h1>} />
+					{/* Cambiar por componente NoMatch xd */}
+					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Router>
 		</>
