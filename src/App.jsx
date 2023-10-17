@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
+import PublicLayout from './layouts/PublicLayout';
 
 function App() {
 	return (
 		<>
 			<Router>
 				<Routes>
-					<Route path="/">
+					<Route path="/" element={<PublicLayout />}>
 						<Route path="" element={<Index />} />
 					</Route>
 
