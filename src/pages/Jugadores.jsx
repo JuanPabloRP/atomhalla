@@ -47,7 +47,7 @@ const Jugadores = () => {
 				Mejores Jugadores
 			</h1>
 
-			<section className="flex justify-center items-center flex-wrap gap-5 " ref={containerRef}>
+			<section className="flex justify-center items-center flex-wrap gap-5 " >
 				{players ? (
 					players.map((player) => (
 						<>
