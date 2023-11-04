@@ -6,11 +6,11 @@ import Error from '../components/Error';
 
 const Jugadores = () => {
 	const [players, setPlayers] = useState([]);
-	const [inputSearch, setInputSearch] = useState('3145331');
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(false);
 
-	//utils/rankedseasonal?region=all&page=1
+	
+//utils/rankedseasonal?region=all&page=1
 	useEffect(() => {
 		fetch(`${URL_API}utils/ranked1v1?region=all&page=1`)
 			.then((res) => {
@@ -33,21 +33,21 @@ const Jugadores = () => {
 			.finally(() => {
 				setLoading(false);
 			});
-	}, [inputSearch]);
+	}, []);
+	
 
 	if (loading) return <Loading />;
 
 	if (error) return <Error />;
 
+  console.log(players);
 	return (
 		<main className="flex flex-col ">
 			<h1 className="my-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center ">
 				Mejores Jugadores
 			</h1>
 
-			
-
-			<section className="flex justify-center items-center flex-wrap gap-5">
+			<section className="flex justify-center items-center flex-wrap gap-5 " ref={containerRef}>
 				{players ? (
 					players.map((player) => (
 						<>
@@ -58,6 +58,8 @@ const Jugadores = () => {
 					<p>No hay Jugadores</p>
 				)}
 			</section>
+
+      
 		</main>
 	);
 };
@@ -105,3 +107,75 @@ export default Jugadores;
 				</div>
 			</form>
 */
+
+/*
+	//utils/rankedseasonal?region=all&page=1
+	useEffect(() => {
+		fetch(`${URL_API}utils/ranked1v1?region=all&page=1`)
+			.then((res) => {
+				if (!res.ok) {
+					setError(true);
+					throw Error;
+				}
+
+				return res.json();
+			})
+			.then((datos) => {
+				const { data } = datos;
+				//console.log(data);
+				setPlayers(data);
+			})
+			.catch((err) => {
+				console.log(err);
+				setError(true);
+			})
+			.finally(() => {
+				setLoading(false);
+			});
+	}, [inputSearch]);
+
+*/
+
+
+
+/*
+
+	const [page, setPage] = useState(2);
+
+
+
+useEffect(() => {
+    const fecthData = async () => {
+			try {
+				const res = await fetch(
+					`${URL_API}utils/ranked1v1?region=all&page=${page}`
+				);
+				const newData = await res.json();
+
+				if (newData.length > 0) {
+					setPlayers(prevPlayers => [...prevPlayers, ...newData]);
+					setPage(prevPage => prevPage + 1);
+				}
+			} catch (err) {
+				console.log(err);
+				setError(true);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		const handleScroll = () => {
+			const { scrollTop, clientHeight, scrollHeight } = containerRef.current;
+
+			if (scrollTop + clientHeight >= scrollHeight - 10) {
+				fecthData();
+			}
+		};
+
+		containerRef.current?.addEventListener('scroll', handleScroll);
+		return () => {
+			containerRef.current?.removeEventListener('scroll', handleScroll);
+		};
+	}, [players]);
+
+ */
