@@ -25,7 +25,6 @@ const Navbar = () => {
 		<nav className="bg-white border-gray-200 dark:bg-gray-900">
 			<section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 				<section className="flex">
-
 					<span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
 						AtomHalla
 					</span>
@@ -82,6 +81,20 @@ const Navbar = () => {
 						))}
 					</ul>
 				</section>
+
+				<section
+					className={`${
+						navbarOpen ? 'block' : 'hidden'
+					} w-full md:block md:w-auto my-2 relative`}
+				>
+					<input
+						type="search"
+						id="search"
+						className="mx-auto md:mx-0 w-full block max-w-lg p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						placeholder="Buscar jugador"
+						required
+					/>
+				</section>
 			</section>
 		</nav>
 	);
@@ -90,46 +103,31 @@ const Navbar = () => {
 export default Navbar;
 
 /*
-<li>
-							<a
-								href="#"
-								className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-								aria-current="page"
-							>
-								Home
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>
-								About
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>
-								Services
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>
-								Pricing
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							>
-								Contact
-							</a>
-						</li>
+<div className="relative z-0 w-full mb-6 group">
+	<input
+		type="tel"
+		pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+		name="floating_phone"
+		id="floating_phone"
+		className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+		placeholder=" "
+		required
+	/>
+	<label
+		htmlFor="floating_phone"
+		className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+	>
+		Buscar jugador
+	</label>
+</div>
+*/
 
+/*
+	
+	<button
+		type="submit"
+		className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+	>
+		Search
+	</button>
 */

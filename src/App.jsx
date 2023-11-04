@@ -4,6 +4,7 @@ import PublicLayout from './layouts/PublicLayout';
 import Jugadores from './pages/Jugadores';
 import Comparar from './pages/Comparar';
 import NoMatch from "./components/NoMatch"
+import Jugador from './pages/Jugador';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 					<Route path="/" element={<PublicLayout />}>
 						<Route path="" element={<Index />} />
 						<Route path="players" element={<Jugadores />} />
+						<Route path="player/:id" element={<Jugador />} />
 						<Route path="vs" element={<Comparar />} />
 					</Route>
 
