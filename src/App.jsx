@@ -3,6 +3,7 @@ import Index from './pages/Index';
 import PublicLayout from './layouts/PublicLayout';
 import Jugadores from './pages/Jugadores';
 import Comparar from './pages/Comparar';
+import NoMatch from "./components/NoMatch"
 
 function App() {
 	return (
@@ -15,8 +16,8 @@ function App() {
 						<Route path="vs" element={<Comparar />} />
 					</Route>
 
-					{/* Cambiar por un componente NoMatch */}
-					<Route path="*" element={<h1>Esta ruta no existe</h1>} />
+					{/* Cambiar por componente NoMatch xd */}
+					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Router>
 		</>
