@@ -3,8 +3,9 @@ import Index from './pages/Index';
 import PublicLayout from './layouts/PublicLayout';
 import Jugadores from './pages/Jugadores';
 import Comparar from './pages/Comparar';
-import NoMatch from "./components/NoMatch"
+import NoMatch from './components/NoMatch';
 import Jugador from './pages/Jugador';
+import About from './pages/About';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 						<Route path="players" element={<Jugadores />} />
 						<Route path="player/:id" element={<Jugador />} />
 						<Route path="vs" element={<Comparar />} />
+						<Route path="about" element={<About />} />
 					</Route>
 
 					{/* Cambiar por componente NoMatch xd */}
