@@ -17,6 +17,10 @@ const Navbar = () => {
 			name: 'Comparar',
 			href: '/vs',
 		},
+		{
+			name: 'Leyendas',
+			href: '/legends',
+		},
 	];
 
 	const handleOpen = () => setNavbarOpen(!navbarOpen);

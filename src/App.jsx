@@ -6,6 +6,8 @@ import Comparar from './pages/Comparar';
 import NoMatch from './components/NoMatch';
 import Jugador from './pages/Jugador';
 import About from './pages/About';
+import Leyendas from './pages/Leyendas';
+import Leyenda from "./pages/Leyenda";
 
 function App() {
 	return (
@@ -17,10 +19,12 @@ function App() {
 						<Route path="players" element={<Jugadores />} />
 						<Route path="player/:id" element={<Jugador />} />
 						<Route path="vs" element={<Comparar />} />
+						<Route path="legends" element={<Leyendas />} />
+						<Route path="legends/:id" element={<Leyenda />} />
 						<Route path="about" element={<About />} />
 					</Route>
 
-					{/* Cambiar por componente NoMatch xd */}
+					{/* Si la ruta no existe muestra esto xd*/}
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Router>

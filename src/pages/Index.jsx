@@ -21,7 +21,14 @@ const Index = () => {
 						accusamus eos?
 					</p>
 					<footer className="homeCard__footer">
-						<button className="homeCard__btn">Code</button>
+						<a
+							href="https://github.com/JuanPabloRP/atomhalla"
+							target="_blank"
+							rel="noreferrer"
+							className="homeCard__btn"
+						>
+							Code
+						</a>
 					</footer>
 				</article>
 			</section>
