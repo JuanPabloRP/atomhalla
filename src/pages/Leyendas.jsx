@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { URL_API } from '../utils/constants';
+import { URL_API } from '../utils/CONSTANTS';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
 import LegendCard from '../components/legends/LegendCard';
