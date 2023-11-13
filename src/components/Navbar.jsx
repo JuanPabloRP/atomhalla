@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import Search from './players/SearchInput';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
@@ -85,26 +86,21 @@ const Navbar = () => {
 						))}
 					</ul>
 				</section>
-
-				<section
-					className={`${
-						navbarOpen ? 'block' : 'hidden'
-					} w-full md:block md:w-auto my-2 relative`}
-				>
-					<input
-						type="search"
-						id="search"
-						className="mx-auto md:mx-0 w-full block max-w-lg p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						placeholder="Buscar jugador"
-						required
-					/>
-				</section>
 			</section>
 		</nav>
 	);
 };
 
 export default Navbar;
+/*
+<section
+					className={`${
+						navbarOpen ? 'block' : 'hidden'
+					} w-full md:block md:w-auto my-2 relative flex`}
+				>
+					<Search />
+				</section>
+*/
 
 /*
 <div className="relative z-0 w-full mb-6 group">

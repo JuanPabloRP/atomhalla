@@ -33,7 +33,7 @@ const Leyenda = () => {
 	} = legend;
 
 	useEffect(() => {
-		fetch(`${URL_API}legends/id?legend_id=${id}}`)
+		fetch(`${URL_API}/legends/id?legend_id=${id}}`)
 			.then((res) => {
 				if (!res.ok) {
 					setError(true);

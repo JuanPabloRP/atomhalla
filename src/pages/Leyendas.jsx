@@ -9,7 +9,7 @@ const Leyendas = () => {
 	const [error, setError] = useState(false);
 
 	useEffect(() => {
-		fetch(`${URL_API}legends/all`)
+		fetch(`${URL_API}/legends/all`)
 			.then((res) => {
 				if (!res.ok) {
 					setError(true);

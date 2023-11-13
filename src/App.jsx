@@ -7,7 +7,9 @@ import NoMatch from './components/NoMatch';
 import Jugador from './pages/Jugador';
 import About from './pages/About';
 import Leyendas from './pages/Leyendas';
-import Leyenda from "./pages/Leyenda";
+import Leyenda from './pages/Leyenda';
+import BestPlayers from './pages/BestPlayers';
+import Search from './pages/Search';
 
 function App() {
 	return (
@@ -16,8 +18,11 @@ function App() {
 				<Routes>
 					<Route path="/" element={<PublicLayout />}>
 						<Route path="" element={<Index />} />
-						<Route path="players" element={<Jugadores />} />
-						<Route path="player/:id" element={<Jugador />} />
+						<Route path="players/" element={<Jugadores />}>
+							<Route path="best" element={<BestPlayers />} />
+							<Route path="search" element={<Search />} />
+							<Route path=":id" element={<Jugador />} />
+						</Route>
 						<Route path="vs" element={<Comparar />} />
 						<Route path="legends" element={<Leyendas />} />
 						<Route path="legends/:id" element={<Leyenda />} />

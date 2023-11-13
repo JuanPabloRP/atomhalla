@@ -26,20 +26,17 @@ const Card = ({ player }) => {
 
 	return (
 		<article className="max-w-lg w-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-300 dark:hover:bg-gray-700">
-			<img
-				className="rounded-t-lg"
-				src="/docs/images/blog/image-1.jpg"
-				alt=""
-			/>
-
 			<section className="p-5 flex flex-col">
 				<header className="mb-3 font-normal text-gray-700 dark:text-gray-400 w-full flex justify-between">
 					<span>#{rank}</span>
 					<span>{tier}</span>
 					<span>{regions[region]}</span>
 				</header>
-				<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-					{name}
+				<span className="font-light text-xs text-gray-400 dark:text-gray-500">
+					ID: {brawlhalla_id}
+				</span>
+				<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex flex-wrap  items-baseline gap-4">
+					<span>{name}</span>
 				</h5>
 				{/* <span>ID: {brawlhalla_id}</span> */}
 				<span>Games {games}</span>
