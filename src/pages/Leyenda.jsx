@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { URL_API } from '../utils/constants';
+import { URL_API } from '../utils/CONSTANTS';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
 import BackIcon from '../assets/svg/BackIcon';
