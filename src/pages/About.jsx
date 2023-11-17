@@ -1,7 +1,7 @@
 const About = () => {
 	return (
-		<main>
-			<h1 className="my-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center ">
+		<main className="bg-white text-black dark:bg-gray-800 dark:text-white">
+			<h1 className="py-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center ">
 				Sobre el proyecto
 			</h1>
 

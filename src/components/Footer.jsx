@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
-		<footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+		<footer className="bg-white shadow dark:bg-gray-900 ">
 			<section className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
 				<section className="sm:flex sm:items-center sm:justify-between">
 					<Link to={'/'} className="flex items-center mb-4 sm:mb-0 ">
@@ -14,7 +14,7 @@ const Footer = () => {
 						<li>
 							<Link
 								to="/about"
-								className="mr-4 hover:underline md:mr-6 font-bold dark:text-blue-600"
+								className="mr-4 hover:underline md:mr-6 font-bold text-blue-600"
 							>
 								About
 							</Link>

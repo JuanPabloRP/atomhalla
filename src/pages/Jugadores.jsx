@@ -8,8 +8,6 @@ import { NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
 const Jugadores = () => {
-
-
 	const routes = [
 		{
 			path: '/players/best',
@@ -21,10 +19,9 @@ const Jugadores = () => {
 		},
 	];
 
-
 	return (
-		<main className="flex flex-col ">
-			<h1 className="my-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center ">
+		<main className="flex flex-col min-h-screen dark:bg-gray-800">
+			<h1 className="my-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white  text-center ">
 				Jugadores
 			</h1>
 

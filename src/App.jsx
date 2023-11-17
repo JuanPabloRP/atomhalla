@@ -13,7 +13,7 @@ import Search from './pages/Search';
 
 function App() {
 	return (
-		<>
+		<main className="min-h-screen text-gray-900 dark:text-white dark:bg-gray-800">
 			<Router>
 				<Routes>
 					<Route path="/" element={<PublicLayout />}>
@@ -33,7 +33,7 @@ function App() {
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Router>
-		</>
+		</main>
 	);
 }
 

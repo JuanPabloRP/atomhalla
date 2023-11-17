@@ -90,7 +90,9 @@ const Leyenda = () => {
 	if (error) return <Error />;
 
 	return (
-		<main className="flex py-10 flex-col justify-center items-center max-w-5xl mx-auto">
+		<main
+			className="flex py-10 flex-col justify-center items-center  mx-auto bg-white text-black dark:bg-gray-800 dark:text-white"
+		>
 			<Link to={'/legends'}>
 				<BackIcon width={42} height={42} />
 			</Link>

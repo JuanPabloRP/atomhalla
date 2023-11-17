@@ -41,9 +41,11 @@ const Card = ({ player }) => {
 					<span>{name}</span>
 				</h5>
 				{/* <span>ID: {brawlhalla_id}</span> */}
-				<span>Games {games}</span>
-				<span>Wins: {wins}</span>
-				<span>Winrate: {((wins / games) * 100).toFixed(2)}%</span>
+				<span className="text-gray-900 dark:text-white">Games {games}</span>
+				<span className="text-gray-900 dark:text-white">Wins: {wins}</span>
+				<span className="text-gray-900 dark:text-white">
+					Winrate: {((wins / games) * 100).toFixed(2)}%
+				</span>
 
 				<section className="w-full bg-red-600 rounded-full h-2.5 dark:bg-red-600">
 					<section
@@ -52,7 +54,7 @@ const Card = ({ player }) => {
 					></section>
 				</section>
 
-				<p className="my-2">
+				<p className="my-2 text-gray-900 dark:text-white" >
 					<span className="mb-3 text-lg font-bold text-black dark:text-white">
 						{rating}
 					</span>

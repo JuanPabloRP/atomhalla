@@ -31,7 +31,19 @@ const Jugador = () => {
 		kospikeball,
 	} = player;
 
-	const { clan_id, clan_name, clan_xp, personal_xp } = clan;
+	const No_ID = 'No ID';
+	let clan_id = No_ID;
+	let clan_name = '';
+	let clan_xp = '';
+	let personal_xp = '';
+	if (clan) {
+		({
+			clan_id = No_ID,
+			clan_name = '',
+			clan_xp = '',
+			personal_xp = '',
+		} = clan);
+	}
 
 	useEffect(() => {
 		fetch(`${URL_API}/stats/id?brawlhalla_id=${id}`)
@@ -64,7 +76,9 @@ const Jugador = () => {
 	if (loading) return <Loading />;
 
 	return (
-		<section className="max-w-5xl mx-auto flex flex-col justify-center items-center">
+		<section
+			className="max-w-5xl mx-auto flex flex-col justify-center items-center text-gray-900 dark:text-white"
+		>
 			<Link to={'/players'}>
 				<BackIcon width={42} height={42} />
 			</Link>
@@ -78,7 +92,7 @@ const Jugador = () => {
 					</h2>
 				</header>
 
-				<main className="">
+				<main>
 					<h3 className="text-2xl mb-3 font-semibold text-center">
 						Estadisticas personales
 					</h3>
@@ -143,24 +157,25 @@ const Jugador = () => {
 							</section>
 						</article>
 					</section>
-
-					<section className="my-5">
-						<h3 className="text-center text-xl mb-3 font-semibold ">
-							🛡Información clan🛡
-						</h3>
-						<section>
-							<p className="font-light text-xs text-gray-400 dark:text-gray-500 text-center">
-								ID {clan_id}
-							</p>
-							<h4 className=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white    gap-4 uppercase text-center mb-2">
-								{clan_name}
-							</h4>
-							<p className="flex flex-col items-center md:flex-row md:justify-around">
-								<span>🏆XP Clan {clan_xp}🏆</span>
-								<span>🌟XP Personal {personal_xp}🌟</span>
-							</p>
+					{clan_id !== No_ID && (
+						<section className="my-5">
+							<h3 className="text-center text-xl mb-3 font-semibold ">
+								🛡Información clan🛡
+							</h3>
+							<section>
+								<p className="font-light text-xs text-gray-400 dark:text-gray-500 text-center">
+									ID {clan_id}
+								</p>
+								<h4 className=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white    gap-4 uppercase text-center mb-2">
+									{clan_name}
+								</h4>
+								<p className="flex flex-col items-center md:flex-row md:justify-around">
+									<span>🏆XP Clan {clan_xp}🏆</span>
+									<span>🌟XP Personal {personal_xp}🌟</span>
+								</p>
+							</section>
 						</section>
-					</section>
+					)}
 
 					{/* <section>
 						<h3>Leyendas utilizadas</h3>
