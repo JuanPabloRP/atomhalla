@@ -14,7 +14,7 @@ const Footer = () => {
 						<li>
 							<Link
 								to="/about"
-								className="mr-4 hover:underline md:mr-6 font-bold text-blue-600"
+								className="mr-4 hover:underline md:mr-6 font-bold text-blue-600 dark:text-blue-400"
 							>
 								About
 							</Link>
